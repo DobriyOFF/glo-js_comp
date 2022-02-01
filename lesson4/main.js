@@ -1,8 +1,14 @@
-let num = 266219;
-    mul = 1;
-while (num > 0) {
-  mul *= num % 10;
-  num = Math.floor(num / 10);
+const foo = (str) => {
+  if (typeof str !== "string")
+    console.log("тут не строка");
+  else {
+    str = str.trim();
+    console.log(str);
+  }
+  if (str.length > 30){
+    str = str.substring(0, 30) + "...";
+    console.log(str);
+  } 
 }
-mul **= 3;
-console.log(String(mul).slice(0, 2));
+
+foo("   123")
