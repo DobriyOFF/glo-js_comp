@@ -1,9 +1,5 @@
 const isNumber = (num) => {
-    
-  if (!isNaN(parseFloat(num)) && isFinite(num) && !(/\s/.test(num)) && num !== null)
-      return true;
-  else 
-      return false;
+  return (!isNaN(parseFloat(num)) && isFinite(num) && !(/\s/.test(num)))
 }
 
-console.log(isNumber("  123"));
+console.log(isNumber("123"));
